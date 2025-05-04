@@ -88,7 +88,14 @@ Provide your answer in JSON format with keys: "skills", "responsibilities", "req
         st.text(jd_info_raw)
         jd_info = None
 
-    
+    if jd_info:
+        st.markdown("### Extracted Job Description Information")
+        st.markdown("**Skills:**")
+        st.write(jd_info.get("skills", []))
+        st.markdown("**Responsibilities:**")
+        st.write(jd_info.get("responsibilities", []))
+        st.markdown("**Requirements:**")
+        st.write(jd_info.get("requirements", []))
 
         prompt_comp = f"""
 You are a recruiter assistant.
