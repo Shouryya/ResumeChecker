@@ -89,22 +89,22 @@ Provide your answer in JSON format with keys: "skills", "responsibilities", "req
         jd_info = None
 
     def format_list_as_markdown(items):
-    if not items:
-        return "No data found."
-    return "\n".join(f"- {item}" for item in items)
+        if not items:
+            return "No data found."
+        return "\n".join(f"- {item}" for item in items)
 
-if jd_info:
-    st.markdown("### Extracted Job Description Information")
-    st.markdown("**Skills:**")
-    st.markdown(format_list_as_markdown(jd_info.get("skills", [])))
+    if jd_info:
+        st.markdown("### Extracted Job Description Information")
+        st.markdown("**Skills:**")
+        st.markdown(format_list_as_markdown(jd_info.get("skills", [])))
 
-    st.markdown("**Responsibilities:**")
-    st.markdown(format_list_as_markdown(jd_info.get("responsibilities", [])))
+        st.markdown("**Responsibilities:**")
+        st.markdown(format_list_as_markdown(jd_info.get("responsibilities", [])))
 
-    st.markdown("**Requirements:**")
-    st.markdown(format_list_as_markdown(jd_info.get("requirements", [])))
-else:
-    st.error("Failed to extract job description information.")
+        st.markdown("**Requirements:**")
+        st.markdown(format_list_as_markdown(jd_info.get("requirements", [])))
+     else:
+        st.error("Failed to extract job description information.")
 
 
         prompt_comp = f"""
