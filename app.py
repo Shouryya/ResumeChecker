@@ -133,15 +133,15 @@ Respond in JSON format with keys: "score" (integer), "explanation" (string).
             {"role": "user", "content": prompt_comp},
         ]
 
-        with st.spinner("Computing compatibility score..."):
+    with st.spinner("Computing compatibility score..."):
             comp_raw = azure_openai_chat(messages_comp, max_tokens=300, temperature=0)
-        try:
+    try:
             comp_info = json.loads(comp_raw)
             st.markdown(f"## Compatibility Score: {comp_info['score']}/100")
             st.markdown("### Suggestions / Explanation:")
             st.write(comp_info["explanation"])
-        except Exception as e:
+    except Exception as e:
             st.error(f"Failed to parse compatibility JSON: {e}")
             st.text(comp_raw)
-        else:
-            st.error("Could not extract job description information.")
+else:
+    st.error("Could not extract job description information.")
