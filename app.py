@@ -103,7 +103,7 @@ Provide your answer in JSON format with keys: "skills", "responsibilities", "req
 
         st.markdown("**Requirements:**")
         st.markdown(format_list_as_markdown(jd_info.get("requirements", [])))
-     else:
+    else:
         st.error("Failed to extract job description information.")
 
 
