@@ -143,5 +143,5 @@ Respond in JSON format with keys: "score" (integer), "explanation" (string).
         except Exception as e:
             st.error(f"Failed to parse compatibility JSON: {e}")
             st.text(comp_raw)
-    else:
-        st.error("Could not extract job description information.")
+        else:
+            st.error("Could not extract job description information.")
