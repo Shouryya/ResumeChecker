@@ -7,9 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1Wmwp0-DOz8HLELn6QnuUSrs9EQ6zo7rP
 """
 
-!pip install --quiet PyMuPDF openai
 
-!pip install streamlit PyMuPDF requests
 
 import streamlit as st
 import fitz  # PyMuPDF
