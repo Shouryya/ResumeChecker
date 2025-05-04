@@ -107,7 +107,7 @@ Provide your answer in JSON format with keys: "skills", "responsibilities", "req
         st.error("Failed to extract job description information.")
 
 
-        prompt_comp = f"""
+    prompt_comp = f"""
 You are a recruiter assistant.
 
 Given the job description information:
@@ -128,7 +128,7 @@ Please:
 
 Respond in JSON format with keys: "score" (integer), "explanation" (string).
 """
-        messages_comp = [
+    messages_comp = [
             {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": prompt_comp},
         ]
