@@ -45,7 +45,7 @@ def extract_text_from_pdf(file):
         text += page.get_text()
     return text
 
-st.title("JD & Candidate CV Compatibility Checker")
+st.title("Resume Checker")
 
 st.markdown("Upload Job Description PDF and Candidate CV PDF to get compatibility score and suggestions.")
 
